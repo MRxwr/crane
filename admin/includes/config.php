@@ -8,5 +8,5 @@ if ( $dbconnect->connect_error ){
 	die("Connection Failed: " .$dbconnect->connect_error );
 }
 $sql = "SET CHARACTER SET utf8";
-$dbconnect->query($sql);
+$dbconnect->query($sql); 
 ?>
