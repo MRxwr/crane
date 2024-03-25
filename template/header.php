@@ -38,13 +38,6 @@ require_once("admin/includes/functions.php");
 </head>
 <body>
 
-<div id="preloader">
-    <div class="loader3">
-        <span></span>
-        <span></span>
-    </div>
-</div>
-
 <style>
     label, span, body, h2, h3{
         font-weight: 500 !important;
