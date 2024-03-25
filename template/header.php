@@ -17,7 +17,7 @@ require_once("admin/includes/functions.php");
 
 
     <!-- title -->
-    <title>MY ACAD</title>
+    <title>Crane.</title>
 
     <!-- favicon -->
     <link href="img/favicon.png" type="image/png" rel="icon">
