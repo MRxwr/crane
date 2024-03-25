@@ -20,7 +20,7 @@ require_once("admin/includes/functions.php");
     <title>Crane.</title>
 
     <!-- favicon -->
-    <link href="img/favicon.png" type="image/png" rel="icon">
+    <link href="img/logo.png" type="image/png" rel="icon">
 
     <!-- all css here -->
     <link href="css/<?php echo strtolower($directionHTML) ?>bootstrap.min.css?<?php echo randLetter() . "=" . rand(0000,9999) ?>" rel="stylesheet" type="text/css" />
