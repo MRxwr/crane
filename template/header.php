@@ -17,7 +17,7 @@ require_once("admin/includes/functions.php");
 
 
     <!-- title -->
-    <title>Crane. 123</title>
+    <title>Crane. 123</title> 
 
     <!-- favicon -->
     <link href="img/logo.png" type="image/png" rel="icon">
