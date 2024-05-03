@@ -10,6 +10,15 @@
 	color: white;
 	z-index:1;
 }
+.modal-full {
+	min-width: 100vw;
+	margin: 0;
+}
+.modal-content,.modal-body {
+	min-height: 100vh;
+	border: 0;
+	border-radius: 0;
+}
 .craneDot{
 	font-size:50px;
 	color: #038dff;
@@ -66,4 +75,15 @@ li:hover,li.selected {
 .rightContentDivs {
 	padding: 20px; /* Add padding to keep text away from edges */
 	z-index: 1; /* Bring the text content to the front */
+}
+#menuBtn {
+	display: none;
+}
+@media (max-width: 768px) {
+	.leftContent {
+		display: none;
+	}
+	#menuBtn {
+		display: block;
+	}
 }
