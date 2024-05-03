@@ -28,7 +28,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6 p-5">
+        <div class="col-md-6">
             <table style="font-size:20px">
                 <tr>
                     <td>Name</td>
