@@ -22,14 +22,14 @@
             <h1>Send us a message</h1>
             <h5 style="font-weight:400">Don't worry we always reply to our customers.</h5>
             <div class="row m-0 pt-3" style="font-size:20px">
-                <div class="col-md-6 p-1">Name</div>
-                <div class="col-md-6 p-1">Email</div>
-                <div class="col-md-6 p-1"><input class='form-control' type='text' ></div>
-                <div class="col-md-6 p-1"><input class='form-control' type='text' ></div>
-                <div class="col-md-6 p-1">Number</div>
-                <div class="col-md-6 p-1">Service Type</div>
-                <div class="col-md-6 p-1"><input class='form-control' type='text' ></div>
-                <div class="col-md-6 p-1">
+                <div class="col-sm-6 p-1">Name</div>
+                <div class="col-sm-6 p-1">Email</div>
+                <div class="col-sm-6 p-1"><input class='form-control' type='text' ></div>
+                <div class="col-sm-6 p-1"><input class='form-control' type='text' ></div>
+                <div class="col-sm-6 p-1">Number</div>
+                <div class="col-sm-6 p-1">Service Type</div>
+                <div class="col-sm-6 p-1"><input class='form-control' type='text' ></div>
+                <div class="col-sm-6 p-1">
                     <select class='form-control' >
                         <option>Towing Truck</option>
                         <option>Towing Truck</option>
