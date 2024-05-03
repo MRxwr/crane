@@ -1,7 +1,12 @@
 .sides{
-	/*height:100vh;*/
 	border-radius: 20px;
 	background-color: #000000;
+	color: white;
+	z-index:1;
+}
+.sidesJoin{
+	border-radius: 20px;
+	background-color: #038dff;
 	color: white;
 	z-index:1;
 }
