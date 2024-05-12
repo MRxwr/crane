@@ -91,50 +91,50 @@
 		$(function() {
 			$(document).ready(function() {
 				$(document).on('click', '#how', function() {
+					$('#fullscreenModal').modal('hide');
 					$('#rightSide').fadeOut(function() {
 						$.get('template/rightSideHow.php', function(data) {
 							$('#rightSide').html(data).fadeIn();
-							$('#fullscreenModal').modal('hide');
 						});
 					});
 				});
 				$(document).on('click', '#home', function() {
+					$('#fullscreenModal').modal('hide');
 					$('#rightSide').fadeOut(function() {
 						$.get('template/rightSideHome.php', function(data) {
 							$('#rightSide').html(data).fadeIn();
-							$('#fullscreenModal').modal('hide');
 						});
 					});
 				});
 				$(document).on('click', '#services', function() {
+					$('#fullscreenModal').modal('hide');
 					$('#rightSide').fadeOut(function() {
 						$.get('template/rightSideServices.php', function(data) {
 							$('#rightSide').html(data).fadeIn();
-							$('#fullscreenModal').modal('hide');
 						});
 					});
 				});
 				$(document).on('click', '#contact', function() {
+					$('#fullscreenModal').modal('hide');
 					$('#rightSide').fadeOut(function() {
 						$.get('template/rightSideContact.php', function(data) {
 							$('#rightSide').html(data).fadeIn();
-							$('#fullscreenModal').modal('hide');
 						});
 					});
 				});
 				$(document).on('click', '#privacy', function() {
+					$('#fullscreenModal').modal('hide');
 					$('#rightSide').fadeOut(function() {
 						$.get('template/rightSidePrivacy.php', function(data) {
 							$('#rightSide').html(data).fadeIn();
-							$('#fullscreenModal').modal('hide');
 						});
 					});
 				});
 				$(document).on('click', '#join', function() {
+					$('#fullscreenModal').modal('hide');
 					$('#rightSide').fadeOut(function() {
 						$.get('template/rightSideJoin.php', function(data) {
 							$('#rightSide').html(data).fadeIn();
-							$('#fullscreenModal').modal('hide');
 						});
 					});
 				});
