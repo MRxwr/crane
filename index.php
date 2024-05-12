@@ -100,7 +100,7 @@
 				$(document).on('click', '#home', function() {
 					$('#fullscreenModal').modal('hide');
 					$.get('template/rightSideHome.php', function(data) {
-						$('#rightSide').html('').fadeOut();
+						$('#rightSide').html('').fadeOut().delay(3000);
 						$('#rightSide').html(data).fadeIn();
 					});
 				});
