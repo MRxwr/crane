@@ -93,6 +93,7 @@
 				$(document).on('click', '#how', function() {
 					$('#fullscreenModal').modal('hide');
 					$('#rightSide').fadeOut(function() {
+						$('#rightSide').html().fadeIn();
 						$.get('template/rightSideHow.php', function(data) {
 							$('#rightSide').html(data).fadeIn();
 						});
@@ -101,6 +102,7 @@
 				$(document).on('click', '#home', function() {
 					$('#fullscreenModal').modal('hide');
 					$('#rightSide').fadeOut(function() {
+						$('#rightSide').html().fadeIn();
 						$.get('template/rightSideHome.php', function(data) {
 							$('#rightSide').html(data).fadeIn();
 						});
@@ -117,6 +119,7 @@
 				$(document).on('click', '#contact', function() {
 					$('#fullscreenModal').modal('hide');
 					$('#rightSide').fadeOut(function() {
+						$('#rightSide').html().fadeIn();
 						$.get('template/rightSideContact.php', function(data) {
 							$('#rightSide').html(data).fadeIn();
 						});
@@ -125,6 +128,7 @@
 				$(document).on('click', '#privacy', function() {
 					$('#fullscreenModal').modal('hide');
 					$('#rightSide').fadeOut(function() {
+						$('#rightSide').html().fadeIn();
 						$.get('template/rightSidePrivacy.php', function(data) {
 							$('#rightSide').html(data).fadeIn();
 						});
@@ -133,6 +137,7 @@
 				$(document).on('click', '#join', function() {
 					$('#fullscreenModal').modal('hide');
 					$('#rightSide').fadeOut(function() {
+						$('#rightSide').html().fadeIn();
 						$.get('template/rightSideJoin.php', function(data) {
 							$('#rightSide').html(data).fadeIn();
 						});
