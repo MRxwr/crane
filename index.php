@@ -92,44 +92,53 @@
 			$(document).ready(function() {
 				$(document).on('click', '#how', function() {
 					$('#fullscreenModal').modal('hide');
-					$.get('template/rightSideHow.php', function(data) {
-						$('#rightSide').html('').fadeOut();
-						$('#rightSide').html(data).fadeIn();
+					$('#rightSide').fadeOut(function() {
+						$.get('template/rightSideHow.php', function(data) {
+							$('#rightSide').html(data).fadeIn();
+						});
 					});
 				});
 				$(document).on('click', '#home', function() {
 					$('#fullscreenModal').modal('hide');
-					$.get('template/rightSideHome.php', function(data) {
-						$('#rightSide').html('').fadeOut().delay(3000);
-						$('#rightSide').html(data).fadeIn();
+					$('#rightSide').fadeOut(function() {
+						$.get('template/rightSideHome.php', function(data) {
+							$('#rightSide').html(data).fadeIn();
+						});
 					});
 				});
 				$(document).on('click', '#services', function() {
 					$('#fullscreenModal').modal('hide');
-					$.get('template/rightSideServices.php', function(data) {
-						$('#rightSide').html('').fadeOut();
-						$('#rightSide').html(data).fadeIn();
+					$('#rightSide').fadeOut(function() {
+						$.get('template/rightSideServices.php', function(data) {
+							$('#rightSide').html(data).fadeIn();
+						});
 					});
 				});
 				$(document).on('click', '#contact', function() {
 					$('#fullscreenModal').modal('hide');
-					$.get('template/rightSideContact.php', function(data) {
-						$('#rightSide').html('').fadeOut();
-						$('#rightSide').html(data).fadeIn();
+					$('#rightSide').fadeOut(function() {
+						$.get('template/rightSideContact.php', function(data) {
+							$('#rightSide').html(data).fadeIn();
+						});
 					});
 				});
 				$(document).on('click', '#privacy', function() {
 					$('#fullscreenModal').modal('hide');
-					$.get('template/rightSidePrivacy.php', function(data) {
-						$('#rightSide').html('').fadeOut();
-						$('#rightSide').html(data).fadeIn();
+					$('#rightSide').fadeOut(function() {
+						$.get('template/rightSidePrivacy.php', function(data) {
+							$('#rightSide').html(data).fadeIn();
+						});
 					});
 				});
 				$(document).on('click', '#join', function() {
 					$('#fullscreenModal').modal('hide');
-					$.get('template/rightSideJoin.php', function(data) {
-						$('#rightSide').html('').fadeOut();
-						$('#rightSide').html(data).fadeIn();
+					$('#rightSide').html('').fadeOut(function() {
+						$.get('template/rightSideJoin.php', function(data) {
+							setTimeout(function() {
+								// Update the HTML content and fade in
+								$('#rightSide').html(data).fadeIn();
+							}, 3000);
+						});
 					});
 				});
 			});
