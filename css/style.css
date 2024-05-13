@@ -45,6 +45,11 @@ li:hover,li.selected {
 	color: #038dff; /* Change the color to blue */
 	cursor: pointer;
 }
+.liActive{
+	text-decoration: underline;
+	color: #038dff; /* Change the color to blue */
+	cursor: pointer;
+}
 .joinBtn{
 	background-color: #038dff;
 	color: #FFFFFF;
