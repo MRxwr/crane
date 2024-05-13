@@ -102,6 +102,8 @@
 					});
 				});
 				$(document).on('click', '#home', function() {
+					$("li").removeClass("liActive");
+					$("li[id=home]").addClass("liActive");
 					$('#fullscreenModal').modal('hide');
 					$.get('template/rightSideHome.php', function(data) {
 						$('#rightSide').html('').fadeOut(function() {
@@ -110,6 +112,8 @@
 					});
 				});
 				$(document).on('click', '#services', function() {
+					$("li").removeClass("liActive");
+					$("li[id=services]").addClass("liActive");
 					$('#fullscreenModal').modal('hide');
 					$.get('template/rightSideServices.php', function(data) {
 						$('#rightSide').html('').fadeOut(function() {
@@ -118,6 +122,8 @@
 					});
 				});
 				$(document).on('click', '#contact', function() {
+					$("li").removeClass("liActive");
+					$("li[id=contact]").addClass("liActive");
 					$('#fullscreenModal').modal('hide');
 					$.get('template/rightSideContact.php', function(data) {
 						$('#rightSide').html('').fadeOut(function() {
@@ -126,6 +132,8 @@
 					});
 				});
 				$(document).on('click', '#privacy', function() {
+					$("li").removeClass("liActive");
+					$("li[id=privacy]").addClass("liActive");
 					$('#fullscreenModal').modal('hide');
 					$.get('template/rightSidePrivacy.php', function(data) {
 						$('#rightSide').html('').fadeOut(function() {
@@ -134,6 +142,7 @@
 					});
 				});
 				$(document).on('click', '#join', function() {
+					$("li").removeClass("liActive");
 					$('#fullscreenModal').modal('hide');
 					$.get('template/rightSideJoin.php', function(data) {
 						$('#rightSide').html('').fadeOut(function() {
