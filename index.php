@@ -90,7 +90,7 @@
 	<script>
 		$(function() {
 			$(document).ready(function() {
-				$("#home").addClass("liActive");
+				$("li[id=home]").addClass("liActive");
 				$(document).on('click', '#how', function() {
 					$('#fullscreenModal').modal('hide');
 					$.get('template/rightSideHow.php', function(data) {
