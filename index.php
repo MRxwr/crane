@@ -92,40 +92,40 @@
 			$(document).ready(function() {
 				$(document).on('click', '#how', function() {
 					$('#fullscreenModal').modal('hide');
-					$('#rightSide').fadeOut(function() {
-						$.get('template/rightSideHow.php', function(data) {
+					$.get('template/rightSideHow.php', function(data) {
+						$('#rightSide').html('').fadeOut(function() {
 							$('#rightSide').html(data).fadeIn();
 						});
 					});
 				});
 				$(document).on('click', '#home', function() {
 					$('#fullscreenModal').modal('hide');
-					$('#rightSide').fadeOut(function() {
-						$.get('template/rightSideHome.php', function(data) {
+					$.get('template/rightSideHome.php', function(data) {
+						$('#rightSide').html('').fadeOut(function() {
 							$('#rightSide').html(data).fadeIn();
 						});
 					});
 				});
 				$(document).on('click', '#services', function() {
 					$('#fullscreenModal').modal('hide');
-					$('#rightSide').fadeOut(function() {
-						$.get('template/rightSideServices.php', function(data) {
+					$.get('template/rightSideServices.php', function(data) {
+						$('#rightSide').html('').fadeOut(function() {
 							$('#rightSide').html(data).fadeIn();
 						});
 					});
 				});
 				$(document).on('click', '#contact', function() {
 					$('#fullscreenModal').modal('hide');
-					$('#rightSide').fadeOut(function() {
-						$.get('template/rightSideContact.php', function(data) {
+					$.get('template/rightSideContact.php', function(data) {
+						$('#rightSide').html('').fadeOut(function() {
 							$('#rightSide').html(data).fadeIn();
 						});
 					});
 				});
 				$(document).on('click', '#privacy', function() {
 					$('#fullscreenModal').modal('hide');
-					$('#rightSide').fadeOut(function() {
-						$.get('template/rightSidePrivacy.php', function(data) {
+					$.get('template/rightSidePrivacy.php', function(data) {
+						$('#rightSide').html('').fadeOut(function() {
 							$('#rightSide').html(data).fadeIn();
 						});
 					});
