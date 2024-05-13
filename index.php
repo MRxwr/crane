@@ -92,6 +92,8 @@
 			$(document).ready(function() {
 				$("li[id=home]").addClass("liActive");
 				$(document).on('click', '#how', function() {
+					$("li").removeClass("liActive");
+					$("li[id=how]").addClass("liActive");
 					$('#fullscreenModal').modal('hide');
 					$.get('template/rightSideHow.php', function(data) {
 						$('#rightSide').html('').fadeOut(function() {
