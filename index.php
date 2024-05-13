@@ -133,8 +133,9 @@
 				$(document).on('click', '#join', function() {
 					$('#fullscreenModal').modal('hide');
 					$.get('template/rightSideJoin.php', function(data) {
-						$('#rightSide').html('').fadeOut();
-						$('#rightSide').html(data).fadeIn();
+						$('#rightSide').html('').fadeOut(function() {
+							$('#rightSide').html(data).fadeIn();
+						});
 					});
 				});
 			});
