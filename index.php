@@ -132,10 +132,9 @@
 				});
 				$(document).on('click', '#join', function() {
 					$('#fullscreenModal').modal('hide');
-					$('#rightSide').html('').fadeOut(function() {
-						$.get('template/rightSideJoin.php', function(data) {
-							$('#rightSide').html(data).fadeIn();
-						});
+					$.get('template/rightSideJoin.php', function(data) {
+						$('#rightSide').html('').fadeOut();
+						$('#rightSide').html(data).fadeIn();
 					});
 				});
 			});
