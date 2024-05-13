@@ -134,10 +134,7 @@
 					$('#fullscreenModal').modal('hide');
 					$('#rightSide').html('').fadeOut(function() {
 						$.get('template/rightSideJoin.php', function(data) {
-							setTimeout(function() {
-								// Update the HTML content and fade in
-								$('#rightSide').html(data).fadeIn();
-							}, 3000);
+							$('#rightSide').html(data).fadeIn();
 						});
 					});
 				});
