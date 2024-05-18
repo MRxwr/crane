@@ -12,7 +12,6 @@ require_once("admin/includes/translate.php");
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	<link href="vendors/bower_components/select2/dist/css/select2.min.css" rel="stylesheet" type="text/css"/>
 	<script src="https://use.fontawesome.com/245c9398b0.js"></script>
     <title>Crane.</title>
 	<style><?php echo require("css/style.css") ?></style>
@@ -96,7 +95,6 @@ require_once("admin/includes/translate.php");
 	<script>
 		$(function() {
 			$(document).ready(function() {
-				$('#serviceSelect').select2();
 				$("li[id=home]").addClass("liActive");
 				$.get('rightSide?v=Home', function(data) {
 					$('#rightSide').html('').fadeOut(function() {
