@@ -96,6 +96,13 @@ require_once("admin/includes/translate.php");
 		$(function() {
 			$(document).ready(function() {
 				$("li[id=home]").addClass("liActive");
+				$(document).on('load', function() {
+					$.get('rightSide?v=Home', function(data) {
+						$('#rightSide').html('').fadeOut(function() {
+							$('#rightSide').html(data).fadeIn();
+						});
+					});
+				});
 				$(document).on('click', '#how', function() {
 					$("li").removeClass("liActive");
 					$("li[id=how]").addClass("liActive");
