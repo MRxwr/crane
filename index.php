@@ -100,7 +100,7 @@ require_once("admin/includes/translate.php");
 					$("li").removeClass("liActive");
 					$("li[id=how]").addClass("liActive");
 					$('#fullscreenModal').modal('hide');
-					$.get('views/index?v=How', function(data) {
+					$.get('views/index?v=Hows', function(data) {
 						$('#rightSide').html('').fadeOut(function() {
 							$('#rightSide').html(data).fadeIn();
 						});
