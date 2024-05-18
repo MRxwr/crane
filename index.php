@@ -96,6 +96,7 @@ require_once("admin/includes/translate.php");
 	<script>
 		$(function() {
 			$(document).ready(function() {
+				$('#serviceSelect').select2();
 				$("li[id=home]").addClass("liActive");
 				$.get('rightSide?v=Home', function(data) {
 					$('#rightSide').html('').fadeOut(function() {
