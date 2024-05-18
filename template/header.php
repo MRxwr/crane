@@ -1,45 +1,19 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', '1');
 require_once("admin/includes/config.php");
-require_once("admin/includes/translate.php");
 require_once("admin/includes/functions.php");
+require_once("admin/includes/translate.php");
 ?>
-<!DOCTYPE html>
-<html lang="en" dir="<?php echo $directionHTML ?>">
-<head>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="keywords" content="app, landing, corporate, Creative, Html Template, Template">
-    <meta name="author" content="web-themes">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
-    <!-- title -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://use.fontawesome.com/245c9398b0.js"></script>
     <title>Crane.</title>
-
-    <!-- favicon -->
-    <link href="img/logo.png" type="image/png" rel="icon">
-
-    <!-- all css here -->
-    <link href="css/<?php echo strtolower($directionHTML) ?>bootstrap.min.css?<?php echo randLetter() . "=" . rand(0000,9999) ?>" rel="stylesheet" type="text/css" />
-    <link href="css/fontawesome.min.css?<?php echo randLetter() . "=" . rand(0000,9999) ?>" rel="stylesheet" type="text/css" />
-    <link href="css/owl.carousel.min.css?<?php echo randLetter() . "=" . rand(0000,9999) ?>" rel="stylesheet" type="text/css" /> 
-    <link href="css/helper.css?<?php echo randLetter() . "=" . rand(0000,9999) ?>" rel="stylesheet" type="text/css" />
-    <link href="css/select2bs.css?<?php echo randLetter() . "=" . rand(0000,9999) ?>" rel="stylesheet">
-    <link href="css/nice-select.css?<?php echo randLetter() . "=" . rand(0000,9999) ?>" rel="stylesheet" type="text/css" />
-	<link href="css/intlTelInput.css?<?php echo randLetter() . "=" . rand(0000,9999) ?>" rel="stylesheet" type="text/css" />
-    <link href="css/magnific-popup.css?<?php echo randLetter() . "=" . rand(0000,9999) ?>" rel="stylesheet" type="text/css" />
-    <link href="css/srcollbar.css?<?php echo randLetter() . "=" . rand(0000,9999) ?>" rel="stylesheet" type="text/css" />
-    <link href="css/style.css?<?php echo randLetter() . "=" . rand(0000,9999) ?>" rel="stylesheet" type="text/css" />
-    <link href="css/responsive.css?<?php echo randLetter() . "=" . rand(0000,9999) ?>" rel="stylesheet" type="text/css" />
-
-</head>
-<body>
-
-<style>
-    label, span, body, h2, h3{
-        font-weight: 500 !important;
-    }
-</style>
+	<style><?php echo require("css/style.css") ?></style>
+  </head>
+  <body>
