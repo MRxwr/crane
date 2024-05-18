@@ -18,11 +18,14 @@
                     <h1>Request a service with Crane</h1>
 
                     <?php
-                    $english = "<div><span>Crane is a leading company specializing in car carriers and vehicle transportation services in Kuwait. Our journey began with a vision to revolutionize the car transportation industry by providing exceptional services tailored to the needs of car owners and car crane operators.</span></div>
-                    <div><span>we set out to create a seamless and reliable solution. to providing unparalleled services in the realm of car transportation, leveraging our expertise in operating specialized car carriers. Our focus extends to serving both car owners and crane operators, ensuring a seamless experience for all involved.</span></div>
-                    <div><span>At Crane, we pride ourselves on our commitment to excellence and customer satisfaction. Our team of experienced professionals is dedicated to delivering top-notch services, ensuring the safe and efficient transportation of vehicles across Kuwait.</span></div>
+                    $english = "<div><span>Crane is a leading company specializing in car carriers and vehicle transportation services in Kuwait. Our journey began with a vision to revolutionize the car transportation industry by providing exceptional services tailored to the needs of car owners and car crane operators.</span></div><br>
+                    <div><br><span>we set out to create a seamless and reliable solution. to providing unparalleled services in the realm of car transportation, leveraging our expertise in operating specialized car carriers. Our focus extends to serving both car owners and crane operators, ensuring a seamless experience for all involved.</span></div><br>
+                    <div><br><span>At Crane, we pride ourselves on our commitment to excellence and customer satisfaction. Our team of experienced professionals is dedicated to delivering top-notch services, ensuring the safe and efficient transportation of vehicles across Kuwait.</span></div>
+                    <div>&nbsp;</div><br>
                     <div><span>Driven by innovation and a passion for excellence, we strive to be the preferred choice for car owners and car crane operators alike. Our goal is to expand our presence across Kuwait, establishing Crane as the go-to destination for all car transportation needs.</span></div>
+                    <div>&nbsp;</div><br>
                     <div><span>Experience the Crane difference where quality meets reliability, and excellence is our standard.</span></div>
+                    <div>&nbsp;</div><br>
                     <div><span>Join us on our journey as we redefine the car transportation experience in Kuwait and beyond.</span></div>
                     ";
                     $arabic = "كرين هي شركة رائدة متخصصة في خدمات نقل السيارات في الكويت. نشأتنا من شغفنا بالتميز في مجال حاملات السيارات والرغبة في تلبية الاحتياجات الفريدة لأصحاب السيارات ومشغلي الرافعات .
