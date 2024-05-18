@@ -149,7 +149,7 @@ require_once("admin/includes/translate.php");
 				$(document).on('click', '#join', function() {
 					$("li").removeClass("liActive");
 					$('#fullscreenModal').modal('hide');
-					$.get('rightSide?v=Join.php', function(data) {
+					$.get('rightSide?v=Join', function(data) {
 						$('#rightSide').html('').fadeOut(function() {
 							$('#rightSide').html(data).fadeIn();
 						});
