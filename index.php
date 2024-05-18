@@ -45,21 +45,21 @@ require_once("admin/includes/translate.php");
 							<div class="col-3"></div>
 							<div class="col-9">
 								<ul>
-									<li id="home">Home</li>
-									<li id="how">How it works</li>
-									<li id="services">Services</li>
-									<li id="contact">Contact</li>
-									<li id="privacy">Privacy & Policy</li>
+									<li id="home"><?php echo direction("Home","الرئيسية") ?></li>
+									<li id="how"><?php echo direction("How it works","كيف نعمل") ?></li>
+									<li id="services"><?php echo direction("Services","خدامتنا") ?></li>
+									<li id="contact"><?php echo direction("Contact","تواصل معنا") ?></li>
+									<li id="privacy"><?php echo direction("Privacy & Policy","سياسة الخصوصية") ?></li>
 								</ul>
 							</div>
-							<div class="col-12 text-center"><label class='joinBtn p-2' id="join" >Join Crane<label></div>
+							<div class="col-12 text-center"><label class='joinBtn p-2' id="join" ><?php echo direction("Join Crane","إلتحق بكرين") ?><label></div>
 							<div class="col-12 text-center p-4">
 								<div class="row m-0">
 									<div class="col-6">
 										<div class="lang" id="english">English</div>
 									</div>
 									<div class="col-6">
-										<div class="lang" id="arabic">Arabic</div>
+										<div class="lang" id="arabic">العربية</div>
 									</div>
 								</div>
 							</div>
