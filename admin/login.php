@@ -85,7 +85,7 @@ if ( isset ($_GET["error"]) )
                       <h3 class="text-center txt-dark mb-10">
                         Sign in to
                         <b>
-                          Crane Cpanel
+                          Crane. Control Panel 
                         </b>
                       </h3>
                       <h6 class="text-center nonecase-font txt-grey">
