@@ -11,22 +11,23 @@
 							<div class="col-12 pt-3 pb-3 text-center" style="font-size:50px;font-weight:600">Crane<span class="craneDot">.</span></div>
 							<div class="col-3"></div>
 							<div class="col-9">
-								<ul>
-									<li id="home"><?php echo direction("Home","الرئيسية") ?></li>
-									<li id="how"><?php echo direction("How it works","كيف نعمل") ?></li>
-									<li id="services"><?php echo direction("Services","خدامتنا") ?></li>
-									<li id="contact"><?php echo direction("Contact","تواصل معنا") ?></li>
-									<li id="privacy"><?php echo direction("Privacy & Policy","سياسة الخصوصية") ?></li>
+							<ul>
+								<li id="home"><a href="?v=Home" alt="Crane. Home"><?php echo direction("Home","الرئيسية") ?></a></li>
+								<li id="how"><a href="?v=How" alt="How Crane. Works"><?php echo direction("How it works","كيف نعمل") ?></a></li>
+								<li id="services"><a href="?v=Services" alt="Crane. Services"><?php echo direction("Services","خدامتنا") ?></a></li>
+								<li id="contact"><a href="?v=Contact" alt="Contact Crane."><?php echo direction("Contact","تواصل معنا") ?></a></li>
+								<li id="contact"><a href="?v=About" alt="About Crane."><?php echo direction("About us","من نحن") ?></a></li>
+								<li id="privacy"><a href="?v=Privacy" alt="Crane. Privacy Policy"><?php echo direction("Privacy & Policy","سياسة الخصوصية") ?></a></li>
 								</ul>
 							</div>
-							<div class="col-12 text-center"><label class='joinBtn p-2' id="join" ><?php echo direction("Join Crane","إلتحق بكرين") ?><label></div>
+							<div class="col-12 text-center"><a href="?v=Join" alt="Join Crane."><label class='joinBtn p-2' id="join" ><?php echo direction("Join Crane","إلتحق بكرين") ?><label></a></div>
 							<div class="col-12 text-center p-4">
 								<div class="row m-0">
 									<div class="col-6">
-										<div class="lang" id="english"><a href="?Lang=EN" style="text-decoration: none;color: white;">English</a></div>
+										<div class="lang" id="english"><a href="?Lang=EN">English</a></div>
 									</div>
 									<div class="col-6">
-										<div class="lang" id="arabic"><a href="?Lang=AR" style="text-decoration: none;color: white;">العربية</a></div>
+										<div class="lang" id="arabic"><a href="?Lang=AR">العربية</a></div>
 									</div>
 								</div>
 							</div>
