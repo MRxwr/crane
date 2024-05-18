@@ -4,14 +4,14 @@
         <div class="col-3"></div>
         <div class="col-9">
             <ul>
-            <li id="home"><?php echo direction("Home","الرئيسية") ?></li>
-            <li id="how"><?php echo direction("How it works","كيف نعمل") ?></li>
-            <li id="services"><?php echo direction("Services","خدامتنا") ?></li>
-            <li id="contact"><?php echo direction("Contact","تواصل معنا") ?></li>
-            <li id="privacy"><?php echo direction("Privacy & Policy","سياسة الخصوصية") ?></li>
+            <li id="home"><a href="?Home" alt="Home"><?php echo direction("Home","الرئيسية") ?></a></li>
+            <li id="how"><a href="?How" alt="How"><?php echo direction("How it works","كيف نعمل") ?></a></li>
+            <li id="services"><a href="?Services" alt="Services"><?php echo direction("Services","خدامتنا") ?></a></li>
+            <li id="contact"><a href="?Contact" alt="Contact"><?php echo direction("Contact","تواصل معنا") ?></a></li>
+            <li id="privacy"><a href="?Policy" alt="Policy"><?php echo direction("Privacy & Policy","سياسة الخصوصية") ?></a></li>
             </ul>
         </div>
-        <div class="col-12 text-center"><label class='joinBtn p-2' id="join" ><?php echo direction("Join Crane","إلتحق بكرين") ?><label></div>
+        <div class="col-12 text-center"><a href="?Join" alt="Join Crane"><label class='joinBtn p-2' id="join" ><?php echo direction("Join Crane","إلتحق بكرين") ?><label></a></div>
         <div class="col-12 text-center p-4">
             <div class="row m-0">
                 <div class="col-6">

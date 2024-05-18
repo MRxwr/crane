@@ -5,7 +5,7 @@
 		<div class="col-12">
 			<div class="row" style="height:100vh">
 				<div class="col-md-3 d-flex p-2"><?php require("template/leftSide.php");?></div>
-				<div class="col-md-9 d-flex p-2" id="rightSide"><?php require("rightSide.php")?></div>
+				<div class="col-md-9 d-flex p-2"><?php require("rightSide.php")?></div>
 			</div>
 		</div>
 	</div>
