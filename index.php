@@ -25,7 +25,7 @@ require_once("admin/includes/translate.php");
 							<?php require("template/leftSide.php");?>
 					</div>
 					<div class="col-md-9 d-flex p-2" id="rightSide">
-							<?php require("rightSide?v=Home"); ?>
+							<?php require("rightSide.php?v=Home"); ?>
 					</div>
 				</div>
 			</div>
