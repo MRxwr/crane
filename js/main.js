@@ -1,15 +1,23 @@
 $(function() {
     $(document).ready(function() {
-        $("li[id=home]").addClass("liActive");
+        $("li").removeClass("liActive");
+        var currentUrl = window.location.href;
+        // Function to get query parameter value by name
+        function getQueryParam(url, param) {
+            var params = new URLSearchParams(url.split('?')[1]);
+            return params.get(param);
+        }
+        var vParamValue = getQueryParam(currentUrl, 'v').toLowerCase();
+        $("li[id="+vParamValue+"]").addClass("liActive");
         /*
         $.get('rightSide?v=Home', function(data) {
             $('#rightSide').html('').fadeOut(function() {
                 $('#rightSide').html(data).fadeIn();
             });
         });
-        */
+        
         $(document).on('click', '#how', function() {
-            $("li").removeClass("liActive");
+            
             $("li[id=how]").addClass("liActive");
             $('#fullscreenModal').modal('hide');
             $.get('rightSide?v=How', function(data) {
@@ -67,5 +75,6 @@ $(function() {
                 });
             });
         });
+        */
     });
 });
