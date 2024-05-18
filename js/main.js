@@ -8,6 +8,7 @@ $(function() {
             return params.get(param);
         }
         var vParamValue = getQueryParam(currentUrl, 'v');
+        console.log(vParamValue);
         if ( vParamValue !== "" ){
             $("li[id="+vParamValue.toLowerCase()+"]").addClass("liActive");
         }else{
