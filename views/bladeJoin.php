@@ -30,21 +30,21 @@
         <div class="col-md-6">
             <table style="font-size:20px">
                 <tr>
-                    <td>Name</td>
-                    <td>Email</td>
+                    <td><?php echo direction("Name","الإسم") ?></td>
+                    <td><?php echo direction("Email","البريد الإلكتروني") ?></td>
                 </tr>
                 <tr>
-                   <td><input class='form-control' type='text' ></td> 
-                   <td><input class='form-control' type='text' ></td> 
+                   <td><input class='form-control' type='text' name="name" require></td> 
+                   <td><input class='form-control' type='email' name="email" require></td> 
                 </tr>
                 <tr>
-                    <td>Number</td>
-                    <td>Service Type</td>
+                    <td><?php echo direction("Mobile","الهاتف") ?></td>
+                    <td><?php echo direction("Service Type","نوع الخدمه") ?></td>
                 </tr>
                 <tr>
-                   <td><input class='form-control' type='text' ></td> 
+                   <td><input class='form-control' type='text' pattern="^[0-9]*$" inputmode="numeric" name="mobile" require></td> 
                    <td>
-                        <select class='form-control' >
+                        <select class='form-control' name="service" require>
                             <option>Towing Truck</option>
                             <option>Towing Truck</option>
                             <option>Towing Truck</option>
