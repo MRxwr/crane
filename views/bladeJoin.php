@@ -15,9 +15,8 @@
         <div class="col-md-6 p-5">
             <div class="row">
                 <div class="col-12">
-                    <h1>Join Crane</h1>
-                    <h5 style="font-weight:400"><p>Are you a driver ! join Crane now !<p>Our goal to expand Crane family.</p><p>Fill the details and we will contact you shortly.</p>
-                    </h5>
+                    <h1><?php echo direction("Join Crane","إلتحق بكرين") ?></h1>
+                    <h5 style="font-weight:400"><?php echo direction($settings[0]["enJoin"],$settings[0]["arJoin"]) ?></h5>
                     <img src="img/join-our-family.jpg" class="rounded" style="width:65%">
                 </div>
                 <div class="col-xl-6 p-3">
