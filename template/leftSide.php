@@ -8,6 +8,7 @@
             <li id="how"><a href="?v=How" alt="How Crane. Works"><?php echo direction("How it works","كيف نعمل") ?></a></li>
             <li id="services"><a href="?v=Services" alt="Crane. Services"><?php echo direction("Services","خدامتنا") ?></a></li>
             <li id="contact"><a href="?v=Contact" alt="Contact Crane."><?php echo direction("Contact","تواصل معنا") ?></a></li>
+            <li id="contact"><a href="?v=About" alt="About Crane."><?php echo direction("About us","من نحن") ?></a></li>
             <li id="privacy"><a href="?v=Privacy" alt="Crane. Privacy Policy"><?php echo direction("Privacy & Policy","سياسة الخصوصية") ?></a></li>
             </ul>
         </div>
