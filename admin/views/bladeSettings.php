@@ -84,7 +84,7 @@ if( $settings = selectDB("settings","`id` = '1'")){
 
 	<!-- system en terms -->
 <?php
-$pages = ["Home","How","Services","Contact","Join","Policy"];
+$pages = ["Home","How","Services","Contact","Join","About","Policy"];
 $lang = ["English","Arabic"];
 $dbCol = ["en","ar"];
 for( $i = 0; $i < sizeof($pages); $i++ ){
