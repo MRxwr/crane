@@ -80,6 +80,6 @@ input[type="number"] {
 
 <script>
     $(document).ready(function(){
-        $('select[name="service"]').select2();
+        $('#serviceSelect').select2();
     })
 </script>
