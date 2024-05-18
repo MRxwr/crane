@@ -25,7 +25,7 @@ require_once("admin/includes/translate.php");
 							<?php require("template/leftSide.php");?>
 					</div>
 					<div class="col-md-9 d-flex p-2" id="rightSide">
-							<?php require("views/bladeHome.php"); ?>
+							<?php require("rightSide?v=Home"); ?>
 					</div>
 				</div>
 			</div>
@@ -100,7 +100,7 @@ require_once("admin/includes/translate.php");
 					$("li").removeClass("liActive");
 					$("li[id=how]").addClass("liActive");
 					$('#fullscreenModal').modal('hide');
-					$.get('views/index?v=Hows', function(data) {
+					$.get('rightSide?v=How', function(data) {
 						$('#rightSide').html('').fadeOut(function() {
 							$('#rightSide').html(data).fadeIn();
 						});
@@ -110,7 +110,7 @@ require_once("admin/includes/translate.php");
 					$("li").removeClass("liActive");
 					$("li[id=home]").addClass("liActive");
 					$('#fullscreenModal').modal('hide');
-					$.get('template/rightSideHome.php', function(data) {
+					$.get('rightSide?v=Home', function(data) {
 						$('#rightSide').html('').fadeOut(function() {
 							$('#rightSide').html(data).fadeIn();
 						});
@@ -120,7 +120,7 @@ require_once("admin/includes/translate.php");
 					$("li").removeClass("liActive");
 					$("li[id=services]").addClass("liActive");
 					$('#fullscreenModal').modal('hide');
-					$.get('template/rightSideServices.php', function(data) {
+					$.get('rightSide?v=Services', function(data) {
 						$('#rightSide').html('').fadeOut(function() {
 							$('#rightSide').html(data).fadeIn();
 						});
@@ -130,7 +130,7 @@ require_once("admin/includes/translate.php");
 					$("li").removeClass("liActive");
 					$("li[id=contact]").addClass("liActive");
 					$('#fullscreenModal').modal('hide');
-					$.get('template/rightSideContact.php', function(data) {
+					$.get('rightSide?v=Contact', function(data) {
 						$('#rightSide').html('').fadeOut(function() {
 							$('#rightSide').html(data).fadeIn();
 						});
@@ -140,7 +140,7 @@ require_once("admin/includes/translate.php");
 					$("li").removeClass("liActive");
 					$("li[id=privacy]").addClass("liActive");
 					$('#fullscreenModal').modal('hide');
-					$.get('template/rightSidePrivacy.php', function(data) {
+					$.get('rightSide?v=Privacy', function(data) {
 						$('#rightSide').html('').fadeOut(function() {
 							$('#rightSide').html(data).fadeIn();
 						});
@@ -149,7 +149,7 @@ require_once("admin/includes/translate.php");
 				$(document).on('click', '#join', function() {
 					$("li").removeClass("liActive");
 					$('#fullscreenModal').modal('hide');
-					$.get('template/rightSideJoin.php', function(data) {
+					$.get('rightSide?v=Join.php', function(data) {
 						$('#rightSide').html('').fadeOut(function() {
 							$('#rightSide').html(data).fadeIn();
 						});
