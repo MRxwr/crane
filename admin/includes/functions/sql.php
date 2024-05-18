@@ -30,7 +30,6 @@ function selectDBNew($table, $placeHolders, $where, $order){
     if(!empty($order)) {
         $sql .= " ORDER BY {$order}";
     }
-	echo $sql;die();
     if($stmt = $dbconnect->prepare($sql)) {
         $types = str_repeat('s', count($placeHolders));
         $stmt->bind_param($types, ...$placeHolders);
