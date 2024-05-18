@@ -54,7 +54,7 @@ input[type="number"] {
                 <tr>
                    <td><input class='form-control' type='number' inputmode="numeric" name="mobile" min="0" step="1" required></td> 
                    <td>
-                        <select class='form-control' name="service" id="serviceSelect" required>
+                        <select class='form-control' name="service" required>
                             <option>Towing Truck</option>
                             <option>Towing Truck</option>
                             <option>Towing Truck</option>
