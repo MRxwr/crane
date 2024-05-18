@@ -7,9 +7,9 @@ $(function() {
             var params = new URLSearchParams(url.split('?')[1]);
             return params.get(param);
         }
-        var vParamValue = getQueryParam(currentUrl, 'v').toLowerCase();
+        var vParamValue = getQueryParam(currentUrl, 'v');
         if ( vParamValue !== "" ){
-            $("li[id="+vParamValue+"]").addClass("liActive");
+            $("li[id="+vParamValue.toLowerCase()+"]").addClass("liActive");
         }else{
             $("li[id=home]").addClass("liActive");
         }
