@@ -42,7 +42,7 @@
                     <td><?php echo direction("Service Type","نوع الخدمه") ?></td>
                 </tr>
                 <tr>
-                   <td><input class='form-control' type='text' pattern="^[0-9]*$" inputmode="numeric" name="mobile" require></td> 
+                   <td><input class='form-control' type='number' inputmode="numeric" name="mobile" min="0" step="1" require></td> 
                    <td>
                         <select class='form-control' name="service" require>
                             <option>Towing Truck</option>
