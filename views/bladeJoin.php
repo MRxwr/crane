@@ -14,7 +14,7 @@
         </div>
         <div class="col-md-6 p-5">
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 <?php echo direction("","text-right") ?>">
                     <h1><?php echo direction("Join Crane","إلتحق بكرين") ?></h1>
                     <h5 style="font-weight:400"><?php echo direction($settings[0]["enJoin"],$settings[0]["arJoin"]) ?></h5>
                     <img src="img/join-our-family.jpg" class="rounded" style="width:65%">

@@ -14,7 +14,7 @@
         </div>
         <div class="col-md-6 p-5">
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 <?php echo direction("","text-right") ?>">
                     <h1>Crane.</h1>
                     <h5 style="font-weight:400"><?php echo direction($settings[0]["enHome"],$settings[0]["arHome"]) ?></h5>
                 </div>

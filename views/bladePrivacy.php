@@ -14,7 +14,7 @@
         </div>
         <div class="col-md-12 p-5">
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 <?php echo direction("","text-right") ?>">
                     <h1><?php echo direction("Privacy & Policy","سياسة الخصوصية") ?></h1>
                     <h5 style="font-weight:400"><?php echo direction($settings[0]["enPolicy"],$settings[0]["arPolicy"]) ?></h5>
                 </div>
