@@ -4,14 +4,14 @@
         <div class="col-3"></div>
         <div class="col-9">
             <ul>
-            <li id="home"><a href="?v=Home" alt="Home"><?php echo direction("Home","الرئيسية") ?></a></li>
-            <li id="how"><a href="?v=How" alt="How"><?php echo direction("How it works","كيف نعمل") ?></a></li>
-            <li id="services"><a href="?v=Services" alt="Services"><?php echo direction("Services","خدامتنا") ?></a></li>
-            <li id="contact"><a href="?v=Contact" alt="Contact"><?php echo direction("Contact","تواصل معنا") ?></a></li>
-            <li id="privacy"><a href="?v=Policy" alt="Policy"><?php echo direction("Privacy & Policy","سياسة الخصوصية") ?></a></li>
+            <li id="home"><a href="?v=Home" alt="Crane. Home"><?php echo direction("Home","الرئيسية") ?></a></li>
+            <li id="how"><a href="?v=How" alt="How Crane. Works"><?php echo direction("How it works","كيف نعمل") ?></a></li>
+            <li id="services"><a href="?v=Services" alt="Crane. Services"><?php echo direction("Services","خدامتنا") ?></a></li>
+            <li id="contact"><a href="?v=Contact" alt="Contact Crane."><?php echo direction("Contact","تواصل معنا") ?></a></li>
+            <li id="privacy"><a href="?v=Privacy" alt="Crane. Privacy Policy"><?php echo direction("Privacy & Policy","سياسة الخصوصية") ?></a></li>
             </ul>
         </div>
-        <div class="col-12 text-center"><a href="?v=Join" alt="Join Crane"><label class='joinBtn p-2' id="join" ><?php echo direction("Join Crane","إلتحق بكرين") ?><label></a></div>
+        <div class="col-12 text-center"><a href="?v=Join" alt="Join Crane."><label class='joinBtn p-2' id="join" ><?php echo direction("Join Crane","إلتحق بكرين") ?><label></a></div>
         <div class="col-12 text-center p-4">
             <div class="row m-0">
                 <div class="col-6">
