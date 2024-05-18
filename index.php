@@ -25,7 +25,7 @@ require_once("admin/includes/translate.php");
 							<?php require("template/leftSide.php");?>
 					</div>
 					<div class="col-md-9 d-flex p-2" id="rightSide">
-							<?php require("template/rightSide/bladeHome.php"); ?>
+							<?php require("views/bladeHome.php"); ?>
 					</div>
 				</div>
 			</div>
@@ -100,7 +100,7 @@ require_once("admin/includes/translate.php");
 					$("li").removeClass("liActive");
 					$("li[id=how]").addClass("liActive");
 					$('#fullscreenModal').modal('hide');
-					$.get('template/rightSide/index?v=How', function(data) {
+					$.get('views/index?v=How', function(data) {
 						$('#rightSide').html('').fadeOut(function() {
 							$('#rightSide').html(data).fadeIn();
 						});
