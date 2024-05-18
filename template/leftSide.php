@@ -15,10 +15,10 @@
         <div class="col-12 text-center p-4">
             <div class="row m-0">
                 <div class="col-6">
-                    <div class="lang" id="english"><a href="?Lang=EN" style="text-decoration: none;color: white;">English</a></div>
+                    <div class="lang" id="english"><a href="?Lang=EN">English</a></div>
                 </div>
                 <div class="col-6">
-                    <div class="lang" id="arabic"><a href="?Lang=AR" style="text-decoration: none;color: white;">العربية</a></div>
+                    <div class="lang" id="arabic"><a href="?Lang=AR">العربية</a></div>
                 </div>
             </div>
         </div>
