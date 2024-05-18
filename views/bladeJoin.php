@@ -77,3 +77,9 @@ input[type="number"] {
     </div>
     </div>
 </div>
+
+<script>
+    $(document).ready(function(){
+        $('select[name="service"]').select2();
+    })
+</script>
