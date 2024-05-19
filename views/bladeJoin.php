@@ -56,11 +56,14 @@ input[type="number"] {
                    <td><input class='form-control' type='number' inputmode="numeric" name="mobile" min="0" step="1" required></td> 
                    <td>
                         <select class='form-control' name="service" required>
-                            <option>Towing Truck</option>
-                            <option>Towing Truck</option>
-                            <option>Towing Truck</option>
-                            <option>Towing Truck</option>
-                            <option>Towing Truck</option>
+                            <?php
+                            if( $services = selectDB("services","`status` = '0' AND `hidden` '0' ORDER BY `order` ASC")) {
+                                foreach($services as $service) {
+                                    $title = direction($service["enTitle"],$service["arTitle"]);
+                                    echo "<option value='{$service["id"]}'>{$title}</option>";
+                                }
+                            }
+                            ?>
                         </select>
                     </td> 
                 </tr>
