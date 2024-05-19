@@ -44,20 +44,6 @@
 			</select>
 			</div>
 			
-			<div class="col-md-6">
-			<label><?php echo direction("Academy","الأكادمية") ?></label>
-			<select name="academyId[]" class="form-control" id="academyList" multiple>
-				<?php
-				if( $academy = selectDB("academies","`status` = '0'") ){
-					for( $i = 0; $i < sizeof($academy); $i++ ){
-						$academyTitle = direction($academy[$i]["enTitle"],$academy[$i]["arTitle"]);
-						echo "<option value='{$academy[$i]["id"]}'>{$academyTitle}</option>";
-					}
-				}
-				?>
-			</select>
-			</div>
-			
 			<div class="col-md-6" style="margin-top:10px">
 			<input type="submit" class="btn btn-primary" value="<?php echo direction("Submit","أرسل") ?>">
 			<input type="hidden" name="update" value="0">
@@ -113,19 +99,12 @@
 					$type = "Error";
 				}
 				
-				if( $academy = selectDB("academies","`id` = '{$employees[$i]["academyId"]}'") ){
-					$academy = direction($academy[0]["enTitle"],$academy[0]["arTitle"]);
-				}else{
-					$academy = "";
-				}
-				
 				?>
 				<tr>
 				<td id="name<?php echo $employees[$i]["id"]?>" ><?php echo $employees[$i]["fullName"] ?></td>
 				<td id="email<?php echo $employees[$i]["id"]?>" ><?php echo $employees[$i]["email"] ?></td>
 				<td id="mobile<?php echo $employees[$i]["id"]?>" ><?php echo $employees[$i]["phone"] ?></td>
 				<td><?php echo $type ?></td>
-				<td><?php echo $academy ?></td>
 				<td class="text-nowrap">
 				
 				<a id="<?php echo $employees[$i]["id"] ?>" class="edit btn btn-warning" data-toggle="tooltip" data-original-title="<?php echo direction("Edit","تعديل")  ?>"> <i class="fa fa-pencil text-inverse m-r-10"></i>
@@ -135,8 +114,7 @@
 				<a href="<?php echo "?v={$_GET["v"]}&delId=" . $employees[$i]["id"] ?>" data-toggle="tooltip" data-original-title="<?php echo direction("Delete","حذف")  ?>" class="btn btn-danger"><i class="fa fa-close text-inverse"></i>
 				</a>
 				<div style="display:none">
-					<label id="type<?php echo $employees[$i]["id"]?>"><?php echo $employees[$i]["empType"] ?></label>
-					<label id="academy<?php echo $employees[$i]["id"]?>"><?php echo $employees[$i]["academyId"] ?></label></div>				
+					<label id="type<?php echo $employees[$i]["id"]?>"><?php echo $employees[$i]["empType"] ?></label>				
 				</td>
 				</tr>
 				<?php
@@ -162,8 +140,6 @@
 		var name = $("#name"+id).html();
 		var mobile = $("#mobile"+id).html();
 		var type = $("#type"+id).html();
-		var academyList = $("#academy"+id).html();
-		var logo = $("#logo"+id).html();
 		$("input[name=password]").prop("required",false);
 		$("input[name=email]").val(email);
 		$("input[name=phone]").val(mobile);
@@ -171,10 +147,14 @@
 		$("input[name=fullName]").val(name);
 		$("input[name=fullName]").focus();
 		$("select[name=empType]").val(type);
+		/*
+		var academyList = $("#academy"+id).html();
 		var academyListArray = JSON.parse(academyList);
 		$('#academyList').val(null).trigger('change');
 		setSelectedOptions(academyListArray, "academyList");
+		*/
 	})
+	/*
 	function setSelectedOptions(ids, selectId) {
 		var $select = $('#' + selectId);
 		$select.val(null).trigger('change');
@@ -187,5 +167,6 @@
 		}
 		$select.trigger('change');
 	}
+	*/
 </script>
 
