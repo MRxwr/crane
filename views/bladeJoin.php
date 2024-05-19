@@ -6,6 +6,7 @@ input[type="number"]::-webkit-outer-spin-button,input[type="number"]::-webkit-in
 
 input[type="number"] {
     -moz-appearance: textfield;
+    appearance: textfield;
 }
 </style>
 <div class="rightContent sidesJoin">
