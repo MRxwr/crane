@@ -14,58 +14,9 @@ if ( isset($_GET["hide"]) || isset($_GET["show"]) || isset($_GET["delId"]) || is
 		$id = $_POST["update"];unset($_POST["update"]);
 		if ( $id == 0 ){
             if( isset($_FILES['imageurl']) && is_uploaded_file($_FILES['imageurl']['tmp_name']) ){
-                $directory = "../logos/";
-                $originalfile = $directory . date("d-m-y") . time() .  round(microtime(true)). "L." . getFileExtension($_FILES["imageurl"]["name"]);
-                move_uploaded_file($_FILES["imageurl"]["tmp_name"], $originalfile);
-                $_POST["imageurl"] = str_replace("../logos/",'',$originalfile);
+                $_POST["imageurl"] = uploadImage($_FILES["imageurl"]["tmp_name"]);
             }else{
-                if ( isset($_FILES['imageurl']) ){
-                    $_POST["imageurl"] = "";
-                }
-            }
-
-            if( isset($_FILES['imageurl600']) && is_uploaded_file($_FILES['imageurl600']['tmp_name']) ){
-                $directory = "../logos/";
-                $originalfile = $directory . date("d-m-y") . time() .  round(microtime(true)). "L." . getFileExtension($_FILES["imageurl600"]["name"]);
-                move_uploaded_file($_FILES["imageurl600"]["tmp_name"], $originalfile);
-                $_POST["imageurl600"] = str_replace("../logos/",'',$originalfile);
-            }else{
-                if ( isset($_FILES['imageurl600']) ){
-                    $_POST["imageurl600"] = "";
-                }
-            }
-            
-            if( isset($_FILES['locationImage']) && is_uploaded_file($_FILES['locationImage']['tmp_name']) ){
-                $directory = "../logos/";
-                $originalfile1 = $directory . date("d-m-y") . time() .  round(microtime(true)). "H." . getFileExtension($_FILES["header"]["name"]);
-                move_uploaded_file($_FILES["locationImage"]["tmp_name"], $originalfile1);
-                $_POST["locationImage"] = str_replace("../logos/",'',$originalfile1);
-            }else{
-                if ( isset($_FILES['locationImage']) ){
-                    $_POST["locationImage"] = "";
-                }
-            }
-
-            if( isset($_FILES['header']) && is_uploaded_file($_FILES['header']['tmp_name']) ){
-                $directory = "../logos/";
-                $originalfile1 = $directory . date("d-m-y") . time() .  round(microtime(true)). "H." . getFileExtension($_FILES["header"]["name"]);
-                move_uploaded_file($_FILES["header"]["tmp_name"], $originalfile1);
-                $_POST["header"] = str_replace("../logos/",'',$originalfile1);
-            }else{
-                if ( isset($_FILES['header']) ){
-                    $_POST["header"] = "";
-                }
-            }
-            
-            if( isset($_FILES['clothesImage']) && is_uploaded_file($_FILES['clothesImage']['tmp_name']) ){
-                $directory = "../logos/";
-                $originalfile1 = $directory . date("d-m-y") . time() .  round(microtime(true)). "C." . getFileExtension($_FILES["clothesImage"]["name"]);
-                move_uploaded_file($_FILES["clothesImage"]["tmp_name"], $originalfile1);
-                $_POST["clothesImage"] = str_replace("../logos/",'',$originalfile1);
-            }else{
-                if ( isset($_FILES['clothesImage']) ){
-                    $_POST["clothesImage"] = "";
-                } 
+                $_POST["imageurl"] = "";
             }
 			
 			if( isset($_POST["password"]) && !empty($_POST["password"]) ){
@@ -82,63 +33,10 @@ if ( isset($_GET["hide"]) || isset($_GET["show"]) || isset($_GET["delId"]) || is
 			}
 		}else{
             if( isset($_FILES['imageurl']) && is_uploaded_file($_FILES['imageurl']['tmp_name']) ){
-                $directory = "../logos/";
-                $originalfile = $directory . date("d-m-y") . time() .  round(microtime(true)). "L." . getFileExtension($_FILES["imageurl"]["name"]);
-                move_uploaded_file($_FILES["imageurl"]["tmp_name"], $originalfile);
-                $_POST["imageurl"] = str_replace("../logos/",'',$originalfile);
+                $_POST["imageurl"] = uploadImage($_FILES["imageurl"]["tmp_name"]);
             }else{
-                if( isset($_FILES['imageurl']) ){
-                    $imageurl = selectDB("{$table}","`id` = '{$id}'");
-                    $_POST["imageurl"] = $imageurl[0]["imageurl"];
-                }
-            }
-
-            if( isset($_FILES['imageurl600']) && is_uploaded_file($_FILES['imageurl600']['tmp_name']) ){
-                $directory = "../logos/";
-                $originalfile = $directory . date("d-m-y") . time() .  round(microtime(true)). "L." . getFileExtension($_FILES["imageurl600"]["name"]);
-                move_uploaded_file($_FILES["imageurl600"]["tmp_name"], $originalfile);
-                $_POST["imageurl600"] = str_replace("../logos/",'',$originalfile);
-            }else{
-                if( isset($_FILES['imageurl600']) ){
-                    $imageurl = selectDB("{$table}","`id` = '{$id}'");
-                    $_POST["imageurl600"] = $imageurl[0]["imageurl600"];
-                }
-            }
-            
-            if( isset($_FILES['locationImage']) && is_uploaded_file($_FILES['locationImage']['tmp_name']) ){
-                $directory = "../logos/";
-                $originalfile1 = $directory . date("d-m-y") . time() .  round(microtime(true)). "H." . getFileExtension($_FILES["header"]["name"]);
-                move_uploaded_file($_FILES["locationImage"]["tmp_name"], $originalfile1);
-                $_POST["locationImage"] = str_replace("../logos/",'',$originalfile1);
-            }else{
-                if( isset($_FILES['locationImage']) ){
-                    $locationImage = selectDB("{$table}","`id` = '{$id}'");
-                    $_POST["locationImage"] = $locationImage[0]["locationImage"];
-                } 
-            }
-
-            if( isset($_FILES['header']) && is_uploaded_file($_FILES['header']['tmp_name']) ){
-                $directory = "../logos/";
-                $originalfile1 = $directory . date("d-m-y") . time() .  round(microtime(true)). "H." . getFileExtension($_FILES["header"]["name"]);
-                move_uploaded_file($_FILES["header"]["tmp_name"], $originalfile1);
-                $_POST["header"] = str_replace("../logos/",'',$originalfile1);
-            }else{
-                if( isset($_FILES['header']) ){
-                    $header = selectDB("{$table}","`id` = '{$id}'");
-                    $_POST["header"] = $header[0]["header"];
-                } 
-            }
-            
-            if( isset($_FILES['clothesImage']) && is_uploaded_file($_FILES['clothesImage']['tmp_name']) ){
-                $directory = "../logos/";
-                $originalfile1 = $directory . date("d-m-y") . time() .  round(microtime(true)). "C." . getFileExtension($_FILES["clothesImage"]["name"]);
-                move_uploaded_file($_FILES["clothesImage"]["tmp_name"], $originalfile1);
-                $_POST["clothesImage"] = str_replace("../logos/",'',$originalfile1);
-            }else{
-                if( isset($_FILES['clothesImage']) ){
-                    $clothesImage = selectDB("{$table}","`id` = '{$id}'");
-                    $_POST["clothesImage"] = $clothesImage[0]["clothesImage"];
-                } 
+                $imageurl = selectDB("{$table}","`id` = '{$id}'");
+                $_POST["imageurl"] = $imageurl[0]["imageurl"];
             }
 			
 			if( isset($_POST["password"]) && !empty($_POST["password"]) ){
