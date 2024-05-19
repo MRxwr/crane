@@ -2,7 +2,7 @@
 require_once("admin/includes/config.php");
 require_once("admin/includes/functions.php");
 require_once("admin/includes/translate.php");
-$settings = selectDB("settings","`id` = '1'");
+$settings = selectDB("sections","`id` = '1'");
 $socialMedia = selectDB("social_media","`id` = '1'");
 ?>
 <!doctype html>
