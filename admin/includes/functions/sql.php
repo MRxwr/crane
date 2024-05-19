@@ -1,10 +1,20 @@
 <?php
 //database connections
 function deleteDB($table, $where){
-    GLOBAL $dbconnect;
+    GLOBAL $dbconnect, $userID, $empUsername, $_GET;
     $check = [';', '"'];
     $where = str_replace($check, "", $where);
     $sql = "DELETE FROM `" . $table . "` WHERE " . $where;
+    if( isset($_GET["v"]) && !empty($_GET["v"]) ){
+        $array = array(
+            "userId" => $userID,
+            "username" => $empUsername,
+            "module" => $_GET["v"],
+            "action" => "Delete",
+            "sqlQuery" => json_encode(array("table"=>$table,"where"=>$where)),
+        );
+        LogsHistory($array);
+    }
     if ($stmt = $dbconnect->prepare($sql)) {
         if ($stmt->execute()) {
             return 1;
@@ -30,6 +40,7 @@ function selectDBNew($table, $placeHolders, $where, $order){
     if(!empty($order)) {
         $sql .= " ORDER BY {$order}";
     }
+	
     if($stmt = $dbconnect->prepare($sql)) {
         $types = str_repeat('s', count($placeHolders));
         $stmt->bind_param($types, ...$placeHolders);
@@ -142,13 +153,8 @@ function selectJoinDB($table, $joinData, $where){
 }
 
 function insertDB($table, $data){
-    GLOBAL $dbconnect;
+    GLOBAL $dbconnect, $userID, $empUsername, $_GET;
     $check = [';', '"'];
-    foreach ($data as $key => $value) {
-        if (is_array($value)) {
-            $data[$key] = json_encode($value);
-        }
-    }
     //$data = escapeString($data);
     $keys = array_keys($data);
     $sql = "INSERT INTO `{$table}`(";
@@ -163,6 +169,17 @@ function insertDB($table, $data){
     $stmt = $dbconnect->prepare($sql);
     $types = str_repeat('s', count($data));
     $stmt->bind_param($types, ...array_values($data));
+    if( isset($_GET["v"]) && !empty($_GET["v"]) ){
+        $array = array(
+            "userId" => $userID,
+            "username" => $empUsername,
+            "module" => $_GET["v"],
+            "action" => "Insert",
+            "sqlQuery" => json_encode(array("table"=>$table,"data"=>$data)),
+        );
+        LogsHistory($array);
+    }
+   
     if($stmt->execute()){
         return 1;
     }else{
@@ -171,41 +188,9 @@ function insertDB($table, $data){
     }
 }
 
-function insertDB2($table, $data){
-	GLOBAL $dbconnect;
-	//$check = [';','"',"'"];
-	//$data = str_replace($check,"",$data);
-	$keys = array_keys($data);
-	$sql = "INSERT INTO `".$table."`(";
-	for($i = 0 ; $i < sizeof($keys) ; $i++ ){
-		$sql .= "`".$keys[$i]."`";
-		if ( isset($keys[$i+1]) ){
-			$sql .= ", ";
-		}
-	}
-	$sql .= ")VALUES(";
-	for($i = 0 ; $i < sizeof($data) ; $i++ ){
-		$sql .= "'".$data[$keys[$i]]."'";
-		if ( isset($keys[$i+1]) ){
-			$sql .= ", ";
-		}
-	}		
-	$sql .= ")";
-	if($dbconnect->query($sql)){
-		return 1;
-	}else{
-		return 0;
-	}
-}
-
 function updateDB($table, $data, $where) {
-    GLOBAL $dbconnect;
-    $check = [';', '"']; 
-    foreach ($data as $key => $value) {
-        if (is_array($value)) {
-            $data[$key] = json_encode($value);
-        }
-    }
+    GLOBAL $dbconnect, $userID, $empUsername, $_GET;
+    $check = [';', '"'];
     //$data = escapeString($data);
     $where = str_replace($check, "", $where);
     $keys = array_keys($data);
@@ -222,6 +207,19 @@ function updateDB($table, $data, $where) {
     $stmt = $dbconnect->prepare($sql); 
     $values = array_values($data);
     $stmt->bind_param($params, ...$values);
+    
+    if( isset($_GET["v"]) && !empty($_GET["v"]) ){
+        $array = array(
+            "userId" => $userID,
+            "username" => $empUsername,
+            "module" => $_GET["v"],
+            "action" => "update",
+            "sqlQuery" => json_encode(array("table"=>$table,"data"=>$data,"where"=>$where)),
+        );
+        LogsHistory($array);
+    }
+    
+
     if ($stmt->execute()) {
         return 1;
     } else {
@@ -245,4 +243,52 @@ function escapeStringDirect($data){
 	return $output;
 }
 
+function insertLogDB($table,$data){
+    GLOBAL $dbconnect;
+    $check = [';', '"'];
+    //$data = escapeString($data);
+    $keys = array_keys($data);
+    $sql = "INSERT INTO `{$table}`(";
+    $placeholders = "";
+    foreach ($keys as $key) {
+        $sql .= "`{$key}`,";
+        $placeholders .= "?,";
+    }
+    $sql = rtrim($sql, ",");
+    $placeholders = rtrim($placeholders, ",");
+    $sql .= ") VALUES ({$placeholders})";
+    $stmt = $dbconnect->prepare($sql);
+    $types = str_repeat('s', count($data));
+    $stmt->bind_param($types, ...array_values($data));
+    if($stmt->execute()){
+        return 1;
+    }else{
+        $error = array("msg"=>"insert table error");
+        return outputError($error);
+    }
+}
+
+function LogsHistory($array){
+    insertLogDB("logs",$array);
+}
+
+function queryDB($sql){
+    GLOBAL $dbconnect;
+    if ($stmt = $dbconnect->prepare($sql)) {
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $array = array();
+        while ($row = $result->fetch_assoc()) {
+            $array[] = $row;
+        }
+        if (isset($array) && is_array($array)) {
+            return $array;
+        } else {
+            return 0;
+        }
+    } else {
+        $error = array("msg" => "select table error");
+        return outputError($error);
+    }
+}
 ?>
