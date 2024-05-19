@@ -22,17 +22,16 @@
 		<tbody>
 		<?php 
 		if( $logs = selectDB("logs","`status` = '0' AND `hidden` = '0' ORDER BY `date` DESC") ){
-			for( $i = 0; $i < sizeof($logs); $i++ ){
-				?>
-				<tr>
-				<td><?php echo $vouchers[$i]["date"] ?></td>
-				<td><?php echo $vouchers[$i]["username"] ?></td>
-				<td><?php echo $vouchers[$i]["module"] ?></td>
-				<td><?php echo $vouchers[$i]["action"] ?></td>
-				<td><?php echo $vouchers[$i]["sqlQuery"] ?></td>
-				</tr>
-				<?php
-			}
+            foreach($logs as $log){
+                echo '
+                    <tr>
+                        <td>'.$log["date"].'</td>
+                        <td>'.$log["username"].'</td>
+                        <td>'.$log["module"].'</td>
+                        <td>'.$log["action"].'</td>
+                        <td>'.$log["sqlQuery"].'</td>
+                    </tr>';
+            }
 		}
 		?>
 		</tbody>
