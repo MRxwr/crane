@@ -149,7 +149,7 @@ function uploadImage($imageLocation){
 			// New file
 			$new = "../logos/{$imageSizes[$i]}".$fileTitle;
 			// Write the contents back to a new file
-			var_dump(file_put_contents($new, $data));//file_put_contents($new, $data);
+			file_put_contents($new, $data);
 		}
 		return $fileTitle; 
 	}else{
