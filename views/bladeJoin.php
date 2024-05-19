@@ -1,7 +1,11 @@
 <?php 
 if( isset($_POST["name"]) && !empty($_POST["name"]) ){
     if( insertDB("contact_us",$_POST) ){
-
+        ?>
+        <script>
+            alert("<?php echo direction("Message sent. Thank you.","تم الارسال بنجاح. شكرا لك") ?>");
+        </script>
+        <?php
     }else{
         ?>
         <script>
