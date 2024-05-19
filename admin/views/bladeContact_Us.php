@@ -35,7 +35,7 @@
 					$hide = direction("Lock","قفل الحساب");
 				}
 				
-				if ( $service = selectDB("services","`id` = '{$contacts[$i]["servicesId"]}'") ){
+				if ( $service = selectDB("services","`id` = '{$contacts[$i]["serviceId"]}'") ){
 					$type = direction($service[0]["enTitle"],$service[0]["arTitle"]);
 				}else{
 					$type = "Error";
