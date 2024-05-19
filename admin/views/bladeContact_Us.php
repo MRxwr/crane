@@ -11,6 +11,7 @@
 	<table class="table display responsive product-overview mb-30" id="myTable">
 		<thead>
 		<tr>
+		<th><?php echo direction("Date","التاريخ") ?></th>
 		<th><?php echo direction("Name","الإسم") ?></th>
 		<th><?php echo direction("Email","الإيميل") ?></th>
 		<th><?php echo direction("Mobile","الهاتف") ?></th>
@@ -44,7 +45,7 @@
 				?>
 				<tr>
                     <td><?php echo substr($contacts[$i]["date"],0,10) ?></td>
-                    <td><?php echo $contacts[$i]["fullName"] ?></td>
+                    <td><?php echo $contacts[$i]["name"] ?></td>
                     <td><?php echo $contacts[$i]["email"] ?></td>
                     <td><?php echo $contacts[$i]["phone"] ?></td>
                     <td><?php echo $type ?></td>
