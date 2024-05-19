@@ -57,7 +57,7 @@ input[type="number"] {
                    <td>
                         <select class='form-control' name="service" required>
                             <?php
-                            if( $services = selectDB("services","`status` = '0' AND `hidden` '0' ORDER BY `order` ASC")) {
+                            if( $services = selectDB("services","`status` = '0' AND `hidden` = '0' ORDER BY `order` ASC")) {
                                 foreach($services as $service) {
                                     $title = direction($service["enTitle"],$service["arTitle"]);
                                     echo "<option value='{$service["id"]}'>{$title}</option>";
