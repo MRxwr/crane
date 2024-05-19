@@ -66,6 +66,9 @@ li:hover,li.selected {
 	fill: white;
 	height: 30px;
 }
+.rightContent{
+	width: 100%;
+}
 .rightContentBg {
 	position: absolute;
 	bottom: 17px;
