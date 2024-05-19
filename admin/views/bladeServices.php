@@ -97,7 +97,7 @@
 				?>
 				<tr>
 				<td>
-				<input name="order[]" class="form-control" type="number" value="<?php echo $counter ?>">
+				<input name="order[]" class="form-control" type="number" value="<?php echo str_pad($services[$i]["order"], 2, "0", STR_PAD_LEFT)?>">
 				<input name="id[]" class="form-control" type="hidden" value="<?php echo $services[$i]["id"] ?>">
 				</td>
 				<td id="enTitle<?php echo $services[$i]["id"]?>" ><?php echo $services[$i]["enTitle"] ?></td>
