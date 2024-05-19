@@ -21,7 +21,7 @@
 			</div>
 			
 			<div class="col-md-6">
-			<label><?php echo direction("Hide Banner","أخفي البنر") ?></label>
+			<label><?php echo direction("Hide Service","أخفي الخدمة") ?></label>
 			<select name="hidden" class="form-control">
 				<option value="0">No</option>
 				<option value="1">Yes</option>
