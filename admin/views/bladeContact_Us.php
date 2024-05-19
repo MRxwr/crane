@@ -27,13 +27,13 @@
 			for( $i = 0; $i < sizeof($contacts); $i++ ){
 				$counter = $i + 1;
 				if ( $contacts[$i]["hidden"] == 1 ){
-					$icon = "fa fa-unlock";
+					$icon = "fa fa-eye success";
 					$link = "?v={$_GET["v"]}&show={$contacts[$i]["id"]}";
-					$hide = direction("Unlock","فتح الحساب");
+					$hide = direction("Not seen","غير مقروءة");
 				}else{
-					$icon = "fa fa-lock";
+					$icon = "fa fa-eye-slash danger";
 					$link = "?v={$_GET["v"]}&hide={$contacts[$i]["id"]}";
-					$hide = direction("Lock","قفل الحساب");
+					$hide = direction("Seen","مقروءة");
 				}
 				
 				if ( $service = selectDB("services","`id` = '{$contacts[$i]["serviceId"]}'") ){
