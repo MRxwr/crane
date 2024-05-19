@@ -23,7 +23,7 @@
 		
 		<tbody>
 		<?php 
-		if( $contacts = selectDB("contact_us","`status` = '0' AND `hidden` != '2'") ){
+		if( $contacts = selectDB("contact_us","`status` = '0' AND `hidden` != '2' ORDER BY `id` DESC") ){
 			for( $i = 0; $i < sizeof($contacts); $i++ ){
 				$counter = $i + 1;
 				if ( $contacts[$i]["hidden"] == 1 ){
