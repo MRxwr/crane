@@ -1,6 +1,6 @@
 <?php
 if ( $social_media = selectDB("social_media","`id` = '1'") ){
-	$array = ["youtube","whatsapp","snapchat","instagram","location","tiktok","email"];
+	$array = ["youtube","instagram","facebook"];
 }
 ?>
 <div class="col-sm-12">
@@ -18,7 +18,7 @@ if ( $social_media = selectDB("social_media","`id` = '1'") ){
 		<?php 
 		for( $i =0; $i < sizeof($array); $i++ ){
 		?>
-			<div class="col-md-6">
+			<div class="col-md-4">
 			<div class="form-group">
 			<label class="control-label mb-10"><?php echo strtoupper($array[$i]) ?></label>
 			<input type="text" name="<?php echo strtolower($array[$i]) ?>" class="form-control" value="<?php echo $social_media[0][$array[$i]] ?>"  >
