@@ -138,7 +138,7 @@
 			var logo = $("#logo"+id).html();
 			$("input[type=file]").prop("required",false);
 			$("input[name=update]").val(id);
-			$("input[name=enTitle]").val(enTitle);
+			$("input[name=enTitle]").val(enTitle).focus();
 			$("input[name=arTitle]").val(arTitle);
 			$("select[name=hidden]").val(hidden);
 			$("#logoImg").attr("src","../logos/"+logo);
