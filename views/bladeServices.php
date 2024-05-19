@@ -32,7 +32,7 @@
                 if( $services = selectDB("services","`status` = '0' AND `hidden` = '0' ORDER BY `order` ASC") ){
                     for( $i = 0; $i < count($services); $i++ ){
                         $title = direction($services[$i]["enTitle"],$services[$i]["arTitle"]);
-                        echo "<div class='col-md-6 p-3'><img src='logos/{$services[0]["imageurl"]}' alt='{$services[$i]["enTitle"]}' style='width: 25px;height: 25px;'> <label class='pr-3'>{$title}</label></div>";
+                        echo "<div class='col-md-6 p-3'><img src='logos/{$services[$i]["imageurl"]}' alt='{$services[$i]["enTitle"]}' style='width: 25px;height: 25px;'> <label class='pr-3'>{$title}</label></div>";
                     }
                 }
                 ?>
