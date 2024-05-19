@@ -15,7 +15,7 @@ if ( isset($_GET["hide"]) || isset($_GET["show"]) || isset($_GET["delId"]) || is
 		if ( $id == 0 ){
             if( isset($_FILES['imageurl']) && is_uploaded_file($_FILES['imageurl']['tmp_name']) ){
                 $_POST["imageurl"] = uploadImage($_FILES["imageurl"]["tmp_name"]);
-            }else{
+            }elseif(isset($_FILES['imageurl'])){
                 $_POST["imageurl"] = "";
             }
 			
@@ -34,7 +34,7 @@ if ( isset($_GET["hide"]) || isset($_GET["show"]) || isset($_GET["delId"]) || is
 		}else{
             if( isset($_FILES['imageurl']) && is_uploaded_file($_FILES['imageurl']['tmp_name']) ){
                 $_POST["imageurl"] = uploadImage($_FILES["imageurl"]["tmp_name"]);
-            }else{
+            }elseif(isset($_FILES['imageurl'])){
                 $imageurl = selectDB("{$table}","`id` = '{$id}'");
                 $_POST["imageurl"] = $imageurl[0]["imageurl"];
             }
